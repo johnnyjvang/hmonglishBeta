@@ -1,0 +1,72 @@
+*{
+  margin: 0;
+  padding: 0;
+  /* border-box allows you to not change or add to the width and hieght of a div/box */
+  box-sizing: border-box;
+}
+
+.container{
+  text-align: center;
+}
+
+.some_margin{
+  margin: auto;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.listen{
+  border: 10px solid black;
+}
+
+.card-custom{
+  /* width: 50vh; */
+  /* height: 130vh; */
+  width: 100vh;
+  /* font-family: "Sans" */
+  margin: 2rem;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  box-shadow: 5px 5px 1rem rgba(0,0,0, 0.5);
+  text-align: center;
+}
+
+.card-custom:hover{
+  box-shadow: 5px 5px 1rem rgba(0,0,0, 1);
+  opacity: 0.8;
+}
+
+.image-custom{
+  width: 100%;
+  height: 100%;
+  background-color: purple;
+  /* object-fit: cover; */
+}
+
+.image-size{
+  width: 100%;
+  height: 100%;
+}
+
+.text-custom{
+  padding: 1rem;
+  background-color: gray;
+  padding: 2rem;
+}
+
+.card2{
+  text-align: center;
+  /* margin: 2rem; */
+  padding: 2rem;
+  background-color: black;
+  /* height: 50vh; */
+  /* width: 50vh; */
+}
+
+.over-box{
+  padding: 3rem;
+  background-color: yellow;
+}
