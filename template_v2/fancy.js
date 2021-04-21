@@ -14,22 +14,78 @@ var cardElements = document.getElementsByClassName("card-custom");
 var elemments2 = document.querySelectorAll(".card-custom");
 console.log(elemments2);
 
-for (var i = 0; i < colors.length - 1; i++) {
-  if (colors[i] == "brown" || colors[i] == "gray" || colors[i] == "orange") {
-    console.log(colors[i] + " skip")
-    continue;
+var colorElements = document.querySelector(".colors");
+console.log(colorElements);
+
+// how to change the text with a button press
+document.querySelector(".colors").addEventListener("click", function() {
+  document.querySelector(".category_div h1").innerText = "Category: Colors";
+  // document.querySelector(".category_div h1").before(document.createElement("div"));
+  // document.querySelector(".category_div h1").after(document.createElement("img"));
+  for (var i = 0; i < colors.length - 1; i++) {
+    if (colors[i] == "brown" || colors[i] == "gray" || colors[i] == "orange") {
+      console.log(colors[i] + " skip")
+      continue;
+    }
+    var image_html = "images/" + colors[colors.length - 1] + "/" + colors[i] + ".png"
+    // console.log(image_html)
+    var english_text = colors[i];
+    var hmong_text = colors_hmong[i];
+    var sound_category = colors[colors.length - 1];
+    var sound_name = english_text;
+    var audio_link = "sounds/" + sound_category + "/" + sound_name + ".mp3";
+    // console.log(audio_link);
+    // document.querySelector(".category_div h1").after(generate_card3(image_html, english_text, hmong_text, audio_link));
+    // cardElements[i].addEventListener('click', playSound(audio_link));
   }
-  var image_html = "images/" + colors[colors.length - 1] + "/" + colors[i] + ".png"
-  // console.log(image_html)
-  var english_text = colors[i];
-  var hmong_text = colors_hmong[i];
-  var sound_category = colors[colors.length - 1];
-  var sound_name = english_text;
-  var audio_link = "sounds/" + sound_category + "/" + sound_name + ".mp3";
-  // console.log(audio_link);
-  document.querySelector(".card-custom").after(generate_card2(image_html, english_text, hmong_text, audio_link));
-  // cardElements[i].addEventListener('click', playSound(audio_link));
+  const div_tag = ' <div class="image-custom"> </div>';
+  const div_tag2 = '<div class="card-custom"><div class="image-custom"><img src="images/colors/blue.png"> </div> <div class="text-custom"> <p>English Translation</p> <p>Hmong Translation</p> </div> </div>';
+  console.log(div_tag);
+
+  const div_tag3 = ' <div class = "new_category"><div class="row"> <div class="col-lg-3 col-md-6"> <div class="card2"> <div class="image-custom"> <img class="image-size" src="https://source.unsplash.com/random" alt=""> </div> <div class="text-custom"> <p>English Translation</p> <p>Hmong Translation</p> </div> </div> </div> <div class="col-lg-3 col-md-6"> <div class="card2"> <div class="image-custom"> <img class="image-size" src="https://source.unsplash.com/random" alt=""> </div> <div class="text-custom"> <p>English Translation</p> <p>Hmong Translation</p> </div> </div> </div> <div class="col-lg-3 col-md-6"> <div class="card2"> <div class="image-custom"> <img class="image-size" src="https://source.unsplash.com/random" alt=""> </div> <div class="text-custom"> <p>English Translation</p> <p>Hmong Translation</p> </div> </div> </div> <div class="col-lg-3 col-md-6"> <div class="card2"> <div class="image-custom"> <img class="image-size" src="https://source.unsplash.com/random" alt=""> </div> <div class="text-custom"> <p>English Translation</p> <p>Hmong Translation</p> </div> </div> </div> </div> <div class="row"> <div class="col-lg-3 col-md-6"> <div class="card2"> <div class="image-custom"> <img class="image-size" src="https://source.unsplash.com/random" alt=""> </div> <div class="text-custom"> <p>English Translation</p> <p>Hmong Translation</p> </div> </div> </div> <div class="col-lg-3 col-md-6"> <div class="card2"> <div class="image-custom"> <img class="image-size" src="https://source.unsplash.com/random" alt=""> </div> <div class="text-custom"> <p>English Translation</p> <p>Hmong Translation</p> </div> </div> </div> <div class="col-lg-3 col-md-6"> <div class="card2"> <div class="image-custom"> <img class="image-size" src="https://source.unsplash.com/random" alt=""> </div> <div class="text-custom"> <p>English Translation</p> <p>Hmong Translation</p> </div> </div> </div> <div class="col-lg-3 col-md-6"> <div class="card2"> <div class="image-custom"> <img class="image-size" src="https://source.unsplash.com/random" alt=""> </div> <div class="text-custom"> <p>English Translation</p> <p>Hmong Translation</p> </div> </div> </div> </div> <div class="row"> <div class="col-lg-3 col-md-6"> <div class="card2"> <div class="image-custom"> <img class="image-size" src="https://source.unsplash.com/random" alt=""> </div> <div class="text-custom"> <p>English Translation</p> <p>Hmong Translation</p> </div> </div> </div> <div class="col-lg-3 col-md-6"> <div class="card2"> <div class="image-custom"> <img class="image-size" src="https://source.unsplash.com/random" alt=""> </div> <div class="text-custom"> <p>English Translation</p> <p>Hmong Translation</p> </div> </div> </div> <div class="col-lg-3 col-md-6"> <div class="card2"> <div class="image-custom"> <img class="image-size" src="https://source.unsplash.com/random" alt=""> </div> <div class="text-custom"> <p>English Translation</p> <p>Hmong Translation</p> </div> </div> </div> <div class="col-lg-3 col-md-6"> <div class="card2"> <div class="image-custom"> <img class="image-size" src="https://source.unsplash.com/random" alt=""> </div> <div class="text-custom"> <p>English Translation</p> <p>Hmong Translation</p> </div> </div> </div> </div> </div>';
+
+  if (document.querySelector(".new_category")) {
+    console.log('category already exist');
+  } else {
+    console.log('category does not exist')
+    document.querySelector(".category_div h1").insertAdjacentHTML('afterend', div_tag3);
+  }
+  // document.querySelector(".category_div h1").insertAdjacentHTML('afterend', div_tag3);
+  // generate_color_cards()
+  // document.querySelector(".category_div h1").after(generate_color_cards());
+  // document.querySelector(".category_div h1").after(generate_color_cards());
+});
+
+document.querySelector('.remove').addEventListener("click", function(){
+  document.querySelector(".category_div h1").innerText = "Category: None";
+  remove_category();
+});
+
+function remove_category() {
+  var myobj = document.querySelector(".new_category");
+  myobj.remove();
 }
+
+
+function generate_color_cards() {
+  for (var i = 0; i < colors.length - 1; i++) {
+    if (colors[i] == "brown" || colors[i] == "gray" || colors[i] == "orange") {
+      console.log(colors[i] + " skip")
+      continue;
+    }
+    var image_html = "images/" + colors[colors.length - 1] + "/" + colors[i] + ".png"
+    // console.log(image_html)
+    var english_text = colors[i];
+    var hmong_text = colors_hmong[i];
+    var sound_category = colors[colors.length - 1];
+    var sound_name = english_text;
+    var audio_link = "sounds/" + sound_category + "/" + sound_name + ".mp3";
+    // console.log(audio_link);
+    generate_card2(image_html, english_text, hmong_text, audio_link);
+    // cardElements[i].addEventListener('click', playSound(audio_link));
+  }
+}
+
 
 // for (var i = 0; i < cardElements.length; i++) {
 //   console.log(colors[i])
@@ -110,7 +166,7 @@ random_pic = "https://source.unsplash.com/random";
 
 
 function generate_card2(image_url, hmong_text, english_text, sound_url) {
-  let bodyElement = document.body;
+  let bodyElement = document.createElement('div');
   // The document.createElement() method creates html element specified by tagName
   let cardElement = document.createElement('div');
   let imageContainer = document.createElement('div');
@@ -145,10 +201,10 @@ function generate_card2(image_url, hmong_text, english_text, sound_url) {
   // btnElement.innerText = "Learn more";
 
   // ADDing sound to the generateHTML
-  cardElement.addEventListener("click", function(){
+  cardElement.addEventListener("click", function() {
     let voice_recording = new Audio(sound_url);
     voice_recording.play();
-  })
+  });
 
 
   bodyElement.appendChild(cardElement);
@@ -194,7 +250,7 @@ function generate_card3(image_url, hmong_text, english_text, sound_url) {
   // btnElement.innerText = "Learn more";
 
   // ADDing sound to the generateHTML
-  cardElement.addEventListener("click", function(){
+  cardElement.addEventListener("click", function() {
     let voice_recording = new Audio(sound_url);
     voice_recording.play();
   })
