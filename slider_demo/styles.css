@@ -1,0 +1,120 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.itemconfiguration {
+  height: 100vh;
+  width: 25vw;
+  /* background-color:#CCC; */
+  overflow-y: auto;
+  /* float: left; */
+  /* position: relative; */
+  /* margin-left: 30px; */
+  text-align: center;
+  position: fixed;
+}
+
+.left_contentlist {
+  width: 215px;
+  float: left;
+  padding: 0 0 0 5px;
+  position: relative;
+  float: left;
+  border-right: 1px #f8f7f3 solid;
+  /* background-image:url(images/bubble.png); */
+  /* background-color: black; */
+}
+
+.card-custom {
+  /* width: 15vw; */
+  /* background-color: #f4f4f4; */
+  /* box-shadow: 1rem rgba(0, 0, 0, 0.5); */
+  /* text-align: center; */
+}
+
+.card-custom:hover {
+  /* box-shadow: 1rem rgba(0, 0, 0, 0.5); */
+  background-color: #f4f4f4;
+  opacity: 0.9;
+}
+
+.card2 {
+  text-align: center;
+  /* margin: 2rem; */
+  /* box-sizing: border-box; */
+  padding: 2rem;
+  background-color: gray;
+  border-radius: 10%;
+  /* position: relative; */
+  /* height: 50vh; */
+  /* width: 50vh; */
+}
+
+.card2:hover {
+  background-color: gray;
+  opacity: 0.9;
+}
+
+.image-custom {
+  width: 100%;
+  height: 100%;
+  background-color: purple;
+  /* object-fit: cover; */
+}
+
+.image-size {
+  width: 100%;
+  height: 100%;
+}
+
+.row-custom {
+  /* height: 100vh; */
+  /* overflow-y: auto; */
+  /* padding: 1rem; */
+}
+
+.row-container {
+  width: 99vw;
+}
+
+html,body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  /* position: relative; */
+  /* height: 100%; */
+  width: 98%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}

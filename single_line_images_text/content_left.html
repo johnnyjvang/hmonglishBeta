@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <title>content-left</title>
+</head>
+
+<body>
+  <div class="left_contentlist">
+    <form action="filter" method="post">
+      <div class="itemconfiguration" style="padding-left: 30px;">
+
+        <input type="hidden" value="2" name="hiddenconfig" />
+        <br>
+        <a style="color: black;text-decoration: none;">RAM</a><br>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2RAM40" class="css-checkbox" name="configcheckbox" value="4" onchange="addcategory('2')">
+          <label for="demo_box_2RAM40" name="demo_lbl_20" class="css-label">&nbsp;4</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">GB</a>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2RAM81" class="css-checkbox" name="configcheckbox" value="8" onchange="addcategory('2')">
+          <label for="demo_box_2RAM81" name="demo_lbl_21" class="css-label">&nbsp;8</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">GB</a>
+        <br>
+        <input type="hidden" value="4" name="hiddenconfig" />
+        <br>
+        <a style="color: black;text-decoration: none;">Hard Drive Capacity</a><br>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2HDD10" class="css-checkbox" name="configcheckbox" value="1" onchange="addcategory('4')">
+          <label for="demo_box_2HDD10" name="demo_lbl_20" class="css-label">&nbsp;1</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">TB</a>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2HDD21" class="css-checkbox" name="configcheckbox" value="2" onchange="addcategory('4')">
+          <label for="demo_box_2HDD21" name="demo_lbl_21" class="css-label">&nbsp;2</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">TB</a>
+        <br>
+        <input type="hidden" value="5" name="hiddenconfig" />
+        <br>
+        <a style="color: black;text-decoration: none;">Processor</a><br>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Processor2.80" class="css-checkbox" name="configcheckbox" value="2.8" onchange="addcategory('5')">
+          <label for="demo_box_2Processor2.80" name="demo_lbl_20" class="css-label">&nbsp;2.8</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">GHz</a>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Processor3.21" class="css-checkbox" name="configcheckbox" value="3.2" onchange="addcategory('5')">
+          <label for="demo_box_2Processor3.21" name="demo_lbl_21" class="css-label">&nbsp;3.2</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">GHz</a>
+        <br>
+        <input type="hidden" value="6" name="hiddenconfig" />
+        <br>
+        <a style="color: black;text-decoration: none;">Graphics Card</a><br>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Graphics Memory20" class="css-checkbox" name="configcheckbox" value="2" onchange="addcategory('6')">
+          <label for="demo_box_2Graphics Memory20" name="demo_lbl_20" class="css-label">&nbsp;2</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">GB</a>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Graphics Memory41" class="css-checkbox" name="configcheckbox" value="4" onchange="addcategory('6')">
+          <label for="demo_box_2Graphics Memory41" name="demo_lbl_21" class="css-label">&nbsp;4</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">GB</a>
+        <br>
+        <input type="hidden" value="8" name="hiddenconfig" />
+        <br>
+        <a style="color: black;text-decoration: none;">Cache Memory</a><br>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Cache30" class="css-checkbox" name="configcheckbox" value="3" onchange="addcategory('8')">
+          <label for="demo_box_2Cache30" name="demo_lbl_20" class="css-label">&nbsp;3</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">MB</a>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Cache41" class="css-checkbox" name="configcheckbox" value="4" onchange="addcategory('8')">
+          <label for="demo_box_2Cache41" name="demo_lbl_21" class="css-label">&nbsp;4</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">MB</a>
+        <br>
+        <input type="hidden" value="10" name="hiddenconfig" />
+        <br>
+        <a style="color: black;text-decoration: none;">Front Camera</a><br>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Front Camera20" class="css-checkbox" name="configcheckbox" value="2" onchange="addcategory('10')">
+          <label for="demo_box_2Front Camera20" name="demo_lbl_20" class="css-label">&nbsp;2</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">MP</a>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Front Camera41" class="css-checkbox" name="configcheckbox" value="4" onchange="addcategory('10')">
+          <label for="demo_box_2Front Camera41" name="demo_lbl_21" class="css-label">&nbsp;4</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">MP</a>
+        <br>
+        <input type="hidden" value="12" name="hiddenconfig" />
+        <br>
+        <a style="color: black;text-decoration: none;">Expandable RAM</a><br>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Expandable80" class="css-checkbox" name="configcheckbox" value="8" onchange="addcategory('12')">
+          <label for="demo_box_2Expandable80" name="demo_lbl_20" class="css-label">&nbsp;8</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">GB</a>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Expandable161" class="css-checkbox" name="configcheckbox" value="16" onchange="addcategory('12')">
+          <label for="demo_box_2Expandable161" name="demo_lbl_21" class="css-label">&nbsp;16</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">GB</a>
+        <br>
+        <input type="hidden" value="13" name="hiddenconfig" />
+        <br>
+        <a style="color: black;text-decoration: none;">Clock Speed</a><br>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Clock Speed1.80" class="css-checkbox" name="configcheckbox" value="1.8" onchange="addcategory('13')">
+          <label for="demo_box_2Clock Speed1.80" name="demo_lbl_20" class="css-label">&nbsp;1.8</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">GHz</a>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Clock Speed2.01" class="css-checkbox" name="configcheckbox" value="2.0" onchange="addcategory('13')">
+          <label for="demo_box_2Clock Speed2.01" name="demo_lbl_21" class="css-label">&nbsp;2.0</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">GHz</a>
+        <br>
+        <input type="hidden" value="14" name="hiddenconfig" />
+        <br>
+        <a style="color: black;text-decoration: none;">Graphic Processor</a><br>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Graphics ProcessorRadeon0" class="css-checkbox" name="configcheckbox" value="Radeon" onchange="addcategory('14')">
+          <label for="demo_box_2Graphics ProcessorRadeon0" name="demo_lbl_20" class="css-label">&nbsp;Radeon</label>
+        </a> &nbsp;
+
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Graphics ProcessornVidia GeForce GTX1" class="css-checkbox" name="configcheckbox" value="nVidia GeForce GTX" onchange="addcategory('14')">
+          <label for="demo_box_2Graphics ProcessornVidia GeForce GTX1" name="demo_lbl_21" class="css-label">&nbsp;nVidia GeForce GTX</label>
+        </a> &nbsp;
+
+        <br>
+        <input type="hidden" value="15" name="hiddenconfig" />
+        <br>
+        <a style="color: black;text-decoration: none;">Ethernet</a><br>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Ethernet01-10-20000" class="css-checkbox" name="configcheckbox" value="01-10-2000" onchange="addcategory('15')">
+          <label for="demo_box_2Ethernet01-10-20000" name="demo_lbl_20" class="css-label">&nbsp;01-10-2000</label>
+        </a> &nbsp;
+
+        <br>
+        <input type="hidden" value="16" name="hiddenconfig" />
+        <br>
+        <a style="color: black;text-decoration: none;">Operating System</a><br>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Operating SystemUbuntu0" class="css-checkbox" name="configcheckbox" value="Ubuntu" onchange="addcategory('16')">
+          <label for="demo_box_2Operating SystemUbuntu0" name="demo_lbl_20" class="css-label">&nbsp;Ubuntu</label>
+        </a> &nbsp;
+
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Operating SystemWindows 81" class="css-checkbox" name="configcheckbox" value="Windows 8" onchange="addcategory('16')">
+          <label for="demo_box_2Operating SystemWindows 81" name="demo_lbl_21" class="css-label">&nbsp;Windows 8</label>
+        </a> &nbsp;
+
+        <br>
+        <input type="hidden" value="17" name="hiddenconfig" />
+        <br>
+        <a style="color: black;text-decoration: none;">Wireless LAN</a><br>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2Wireless LANIEEE 802.11b/g/n0" class="css-checkbox" name="configcheckbox" value="IEEE 802.11b/g/n" onchange="addcategory('17')">
+          <label for="demo_box_2Wireless LANIEEE 802.11b/g/n0" name="demo_lbl_20" class="css-label">&nbsp;IEEE 802.11b/g/n</label>
+        </a> &nbsp;
+
+        <br>
+        <input type="hidden" value="18" name="hiddenconfig" />
+        <br>
+        <a style="color: black;text-decoration: none;">Architecture</a><br>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2System Architecture320" class="css-checkbox" name="configcheckbox" value="32" onchange="addcategory('18')">
+          <label for="demo_box_2System Architecture320" name="demo_lbl_20" class="css-label">&nbsp;32</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">Bit</a>
+        <br>
+
+        <a style="text-decoration: none;" href="#">
+          <input type="checkbox" id="demo_box_2System Architecture641" class="css-checkbox" name="configcheckbox" value="64" onchange="addcategory('18')">
+          <label for="demo_box_2System Architecture641" name="demo_lbl_21" class="css-label">&nbsp;64</label>
+        </a> &nbsp;
+
+
+        <a style="text-decoration: none;">Bit</a>
+        <br>
+        <input type="hidden" value="6" name="hiddenscid" />
+        <input type="hidden" id="hidden_array" name="hiddenArray">
+        <input type="submit" value="Filter" id="btnfilter" name="btnfilter" class="btn btn-primary" style="margin-top: 21px;margin-left: 34px;width: 80px;">
+    </form>
+  </div>
+
+</body>
+
+</html>
