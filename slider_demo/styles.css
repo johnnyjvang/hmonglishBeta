@@ -70,7 +70,7 @@
 }
 
 .row-custom {
-  /* height: 100vh; */
+  height: 100vh;
   /* overflow-y: auto; */
   /* padding: 1rem; */
 }
@@ -79,10 +79,10 @@
   width: 99vw;
 }
 
-html,body {
+/* html,body {
   position: relative;
   height: 100%;
-}
+} */
 
 body {
   background: #eee;
@@ -101,6 +101,7 @@ body {
 }
 
 .swiper-slide {
+  /* height: 100%; */
   text-align: center;
   font-size: 18px;
   background: #fff;

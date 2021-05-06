@@ -47,6 +47,7 @@
   padding: 2rem;
   background-color: gray;
   border-radius: 10%;
+  /* padding: 20px 0; */
   /* position: relative; */
   /* height: 50vh; */
   /* width: 50vh; */
@@ -55,6 +56,10 @@
 .card2:hover {
   background-color: gray;
   opacity: 0.9;
+  /* this makes the transition affect a lot slower */
+  transition: 250ms all;
+  transform: scale(1.1);
+  z-index: 1;
 }
 
 
