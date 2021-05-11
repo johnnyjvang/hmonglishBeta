@@ -1,0 +1,38 @@
+    <color name="colorPrimary">#9477cb</color>
+    <color name="colorPrimaryDark">#8565c4</color>
+    <color name="colorAccent">#54D839</color>
+
+    <color name="colorPrimarylight">#6B3CDA</color>
+
+    <color name="gray">#808080</color>
+
+
+    <!--<color name="colorPrimary">#660ac2</color>-->
+    <!--<color name="colorPrimaryDark">#4d0891</color>-->
+    <!--<color name="colorAccent">#38ad38</color>-->
+
+    <!--<color name="colorPrimarylight">#a534cb</color>-->
+
+    <color name="lightGray">#D3D3D3</color>
+    <color name="green">#5B965B</color>
+    <color name="green2">#38ad38</color>
+    <color name="purple">#663096</color>
+    <color name="darkergray">#666666</color>
+
+    <color name="examplepurple">#9477cb</color>
+    <color name="exampleDarkpurple">#8565c4</color>
+
+    <color name="backgroundGreen">#aecb77</color>
+    <color name="backgroundBlue">#77aecb</color>
+    <color name="backgroundOrange">#cb9477</color>
+
+
+    <color name="ashleysPurple">#6B3CDA</color>
+    <color name="ashleysPurpleDark">#571bda</color>
+    <color name="purleDark3">#5a31b7</color>
+    <color name="ashleysPurple2">#482BA3</color>
+    <color name="ashleysPurple3">#5a31b7</color>
+
+
+    <color name="ashleysGreen">#54D839</color>
+    <color name="ashleysRed">#F23C73</color>

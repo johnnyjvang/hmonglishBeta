@@ -1,6 +1,7 @@
 body {
   /* margin: 4rem auto; */
 }
+
 .jumbotron {border-radius: 0;margin-bottom: 0;}
 
 .jumbotron.df-bg-primary {
