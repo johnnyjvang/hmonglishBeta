@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>TEST222</title>
+  <title>V2</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
@@ -45,7 +45,7 @@
     .swiper-wrapper {
       /* width: 100%;
       height: 100%; */
-          /* background-color: blue; */
+      /* background-color: blue; */
     }
 
     .swiper-slide {
@@ -90,7 +90,7 @@
       /* Should be removed. Only for demonstration */
     }
 
-    .row-custom{
+    .row-custom {
       background-color: #eee;
     }
 
@@ -154,8 +154,8 @@
       /* height: calc(100% - 90px); */
     }
 
-    .z-container{
-        cursor: pointer;
+    .z-container {
+      cursor: pointer;
     }
 
 
@@ -185,16 +185,14 @@
       /* background-color: chocolate; */
     }
 
-    .english-text{
+    .english-text {
       color: white;
     }
 
-    .hmong-text{
-
-    }
+    .hmong-text {}
 
     :root {
-    --swiper-theme-color: white;
+      --swiper-theme-color: white;
     }
 
     .nav-list2 {
@@ -218,7 +216,8 @@
       padding: 3px 0;
     }
 
-    .nav-link2::before, .nav-link2::after{
+    .nav-link2::before,
+    .nav-link2::after {
       content: "";
       width: 100%;
       height: 2px;
@@ -227,20 +226,21 @@
       left: 0;
       transform: scaleX(0);
       transition: 0.5s;
-        /* transition: transform 0.5s; */
+      /* transition: transform 0.5s; */
     }
 
-    .nav-link2::after{
+    .nav-link2::after {
       bottom: 0;
       transform-origin: right;
     }
 
-    .nav-link2::before{
+    .nav-link2::before {
       top: 0;
       transform-origin: left;
     }
 
-    .nav-link2:hover::before, .nav-link2:hover::after{
+    .nav-link2:hover::before,
+    .nav-link2:hover::after {
       transform: scaleX(1);
 
       /* .swiper-slide {
@@ -274,7 +274,7 @@
         z-index: 1;
       }
 
-      .row-custom{
+      .row-custom {
         /* margin: 0;
         padding: 0; */
         /* height: 0px; */
@@ -309,13 +309,13 @@
         /* z-index: -1; */
       }
 
-      .z-container{
+      .z-container {
         /* position: relative; */
         z-index: 0;
         /* background-color: blue; */
       }
 
-      .swiper-container{
+      .swiper-container {
         /* background-color: blue; */
       }
 
@@ -421,11 +421,11 @@
             </div>
           </div>
           <ul class="nav-list2">
-            <li class="nav-item2">
-              <h1 class="categories nav-link2">Categories</h1>
+            <li class="nav-item2 colors">
+              <h1 class="categories nav-link2">Colors</h1>
             </li>
-            <li class="nav-item2">
-              <h1 class="categories nav-link2">Categories</h1>
+            <li class="nav-item2 animals">
+              <h1 class="categories nav-link2">Animals</h1>
             </li>
             <li class="nav-item2">
               <h1 class="categories nav-link2">Categories</h1>
@@ -458,31 +458,34 @@
       <!-- add row after the media query -->
       <!-- <div class="row top-menu" style="background-color:#aaa;"> -->
       <div class="row-custom">
-          <ul class="nav nav-pills justify-content-end">
-            <!-- <h1>fuckyou</h1> -->
-            <li class="nav-item">
-              <div class="df-switch">
-                <button type="button" class="btn btn-lg btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
-                  <div class="inner-handle"></div>
-                  <div class="handle"></div>
-                </button>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">1</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">3</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">6</a>
-            </li>
-          </ul>
+        <ul class="nav nav-pills justify-content-end">
+          <!-- <h1>fuckyou</h1> -->
+          <li class="nav-item">
+            <div class="df-switch">
+              <button type="button" class="btn btn-lg btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                <div class="inner-handle"></div>
+                <div class="handle"></div>
+              </button>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">6</a>
+          </li>
+        </ul>
       </div>
 
-      <!-- Swiper -->
+
+<!--
+
       <div class="swiper-container z-container">
         <div class="swiper-wrapper">
+
           <div class="swiper-slide">
             <div class="category-container">
               <div class="image-container">
@@ -494,6 +497,7 @@
               </div>
             </div>
           </div>
+
           <div class="swiper-slide">
             <div class="category-container">
               <div class="image-container">
@@ -539,47 +543,59 @@
             </div>
           </div>
         </div>
-        <!-- Add Pagination -->
+
+        <div class="swiper-pagination"></div>
+      </div> -->
+
+
+      <!-- Swiper -->
+      <div class="swiper-container z-container mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+        </div>
         <div class="swiper-pagination"></div>
       </div>
+
     </div>
+
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->
   <script>
+    // let swiper = new Swiper(".mySwiper", {
+    // spaceBetween: 30,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    // });
+
+    let swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
     $(".side2 h1").on("click", function() {
       $(".side2 h1").removeClass("active");
       $(this).addClass("active");
     })
 
-    var swiper = new Swiper('.swiper-container', {
-      direction: 'vertical',
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      // scrollbar: {
-      //    el: '.swiper-scrollbar',
-      //    draggable: true,
-      // },
-    });
-
-    var swiper2 = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      slidesPerColumn: 2,
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination2",
-        clickable: true,
-      },
-    });
-
-    $(".nav-item a").on("click",function(){
+    $(".nav-item a").on("click", function() {
       $(".nav-item a").removeClass("active");
       $(this).addClass("active");
     })
@@ -587,7 +603,7 @@
 
   <script src="script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
 

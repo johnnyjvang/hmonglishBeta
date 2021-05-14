@@ -26,19 +26,21 @@ let animals = ["bear", "bull", "cat", "chicken", "cow", "deer", "duck", "elephan
 //   tom1.play();
 // }
 let counter = 1
+//
+// let swiper = new Swiper('.swiper-container', {
+//   direction: 'vertical',
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//   },
+// });
 
 create_button_generator1(colors)
-create_button_generator21(animals)
-if (counter ==1){
-  create_sound(colors)
+create_button_generator1(animals)
+if (counter == 1){
+  console.log('fuckkkk')
+  // create_sound(colors)
   counter = 9999;
-  var swiper = new Swiper('.swiper-container', {
-    direction: 'vertical',
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
 }
 
 // This makes button generate card's given the category list with according sound mp3
@@ -57,7 +59,7 @@ function create_button_generator1(category_list){
       document.querySelector(".row-custom").insertAdjacentHTML('afterend', swiper_str);
     }
     create_sound(category_list)
-    var swiper = new Swiper('.swiper-container', {
+    let swiper = new Swiper('.swiper-container', {
       direction: 'vertical',
       pagination: {
         el: '.swiper-pagination',
@@ -86,8 +88,7 @@ function create_button_generator21(category_list){
       document.querySelector(".row-custom").insertAdjacentHTML('afterend', swiper_str);
     }
     create_sound(category_list)
-
-    var swiper = new Swiper(".mySwiper", {
+    let swiper = new Swiper(".mySwiper", {
       spaceBetween: 30,
       pagination: {
         el: ".swiper-pagination",
@@ -96,7 +97,6 @@ function create_button_generator21(category_list){
     });
   });
 }
-
 
 function remove_category() {
   let myobj = document.querySelector(".swiper-container");
@@ -110,13 +110,13 @@ function create_sound(category_list) {
     let sound_name = category_list[i];
     let audio_link = "sounds/" + sound_category + "/" + sound_name + ".mp3";
 
-    console.log(sound_name)
-    console.log(String(i) + ":" + audio_link);
-    console.log(document.querySelectorAll('.sound_element')[i]);
+    // console.log(sound_name)
+    // console.log(String(i) + ":" + audio_link);
+    // console.log(document.querySelectorAll('.sound_element')[i]);
     document.querySelectorAll('.sound_element')[i].addEventListener("click", function() {
-      console.log("added click function to" + String(i));
+      // console.log("added click function to" + String(i));
       let voice_recording = new Audio(audio_link);
-       console.log(audio_link)
+       // console.log(audio_link)
       voice_recording.play();
     });
   }

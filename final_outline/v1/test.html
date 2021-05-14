@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TEST</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      /* why is this component so important?  */
+      box-sizing: border-box;
+    }
+
+    /* Style the body */
+    body {
+      font-family: Arial;
+      margin: 0;
+    }
+
+    /* Header/logo Title */
+    .header {
+      padding: 60px;
+      text-align: center;
+      background: #1abc9c;
+      color: white;
+    }
+
+
+    /* Column container */
+    .row2 {
+      height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Create two unequal columns that sits next to each other */
+    /* Sidebar/left column */
+    .side2 {
+      flex: 20%;
+      background-color: #f1f1f1;
+      /* padding: 20px; */
+    }
+
+    /* Main column */
+    .main2 {
+      flex: 80%;
+      background-color: white;
+      padding: 20px;
+    }
+
+    /* Fake image, just for this example */
+    .fakeimg {
+      background-color: #aaa;
+      width: 100%;
+      padding: 20px;
+    }
+
+    /* Footer */
+    /* .footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+} */
+    .categories {
+      /* background-color: blue; */
+      /* text-decoration-style: solid; */
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .categories:hover {
+      /* transition: 250ms all; */
+      /* transform: scale(1.1); */
+      opacity: 0.9;
+      background-color: gray;
+    }
+
+    .active {
+      background-color: gray;
+    }
+
+    /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 700px) {
+
+      .row2,
+        {
+        /* height: 100vh;  */
+        flex-direction: column;
+      }
+
+      .side2 {
+        /* flex: 10%; */
+        /* position: sticky;  */
+        height: 50px;
+        background-color: #f1f1f1;
+        /* padding: 20px; */
+      }
+
+      /* Main column */
+      .main2 {
+        height: calc(100vh- 50px);
+        flex: 100%;
+        background-color: white;
+        padding: 20px;
+      }
+
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        /* background-color: blue; */
+        /* background-color: #f1f1f1; */
+        /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(148, 48, 48, 0.2), rgba(167, 67, 67, 0.4)), url(images/bg.jpg) center no-repeat; */
+        /* background-size: cover; */
+      }
+
+      .navbar {
+        width: 300px;
+        height: 100%;
+        background-color: #262626;
+        /* background-color: blue; */
+        position: fixed;
+        top: 0;
+        left: -300px;
+        display: flex;
+        /* puts items into the center horiziontally  */
+        justify-content: center;
+        /* puts items center vertically  */
+        align-items: center;
+        border-radius: 0 20% 20% 0;
+        transition: left 0.8s cubic-bezier(0.5, 0, 0, 0.5);
+      }
+
+      .change {
+        left: 0;
+      }
+
+      .hamburger-menu {
+        width: 35px;
+        height: 30px;
+        /* background-color: red; */
+        position: fixed;
+        /* you can position things in a corner with merley top/right */
+        top: 10px;
+        left: 25px;
+        /* when you hover, it changes to a pointer */
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      .line {
+        width: 100%;
+        height: 3px;
+        background-color: chocolate;
+        transition: all 0.8s;
+      }
+
+      .change .line-1 {
+        transform: rotateZ(-45deg) translate(-8px, 6px);
+        /* transform: rotateZ(-405deg) translate(-8px, 6px); */
+      }
+
+      .change .line-2 {
+        opacity: 0;
+      }
+
+      .change .line-3 {
+        transform: rotateZ(45deg) translate(-8px, -6px);
+        /* transform: rotateZ(405deg) translate(-8px, -6px); */
+      }
+
+      .nav-list {
+        text-align: right;
+      }
+
+      .nav-item {
+        /* removes the dots */
+        list-style-type: none;
+        margin: 25px;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        font-size: 2rem;
+        color: #eee;
+        font-weight: 300;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        position: relative;
+        padding: 3px 0;
+      }
+
+      .nav-link::before, .nav-link::after{
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: chocolate;
+        position: absolute;
+        right: 0;
+        transform: scaleX(0);
+        transition: 0.5s;
+          /* transition: transform 0.5s; */
+      }
+
+      .nav-link::after{
+        bottom: 0;
+        transform-origin: right;
+      }
+
+      .nav-link::before{
+        top: 0;
+        transform-origin: left;
+      }
+
+      .nav-link:hover::before, .nav-link:hover::after{
+        transform: scaleX(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- The flexible grid (content) -->
+  <div class="row2">
+    <div class="side2">
+      <div class="container">
+        <nav class="navbar">
+          <div class="hamburger-menu">
+            <div class="line line-1">
+            </div>
+            <div class="line line-2">
+            </div>
+            <div class="line line-3">
+            </div>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <h1 class="categories nav-link">Categories</h1>
+            </li>
+            <li class="nav-item">
+              <h1 class="categories nav-link">Categories</h1>
+            </li>
+            <li class="nav-item">
+              <h1 class="categories nav-link">Categories</h1>
+            </li>
+            <li class="nav-item">
+              <h1 class="categories nav-link">Categories</h1>
+            </li>
+            <li class="nav-item">
+              <h1 class="categories nav-link">Categories</h1>
+            </li>
+            <li class="nav-item">
+              <h1 class="categories nav-link">Categories</h1>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- <h2>HMONGLISH</h2> -->
+      <!-- <h1 class="categories">Categories</h1>
+    <h1 class="categories">Categories</h1>
+    <h1 class="categories">Categories</h1>
+    <h1 class="categories">Categories</h1>
+    <h1 class="categories">Categories</h1>
+    <h1 class="categories">Categories</h1>
+    <h1 class="categories">Categories</h1>
+    <h1 class="categories">Categories</h1>
+    <h1 class="categories">Categories</h1> -->
+
+    </div>
+    <div class="main2">
+      <h2>TITLE HEADING</h2>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    $(".side2 h1").on("click", function() {
+      $(".side2 h1").removeClass("active");
+      $(this).addClass("active");
+    })
+  </script>
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
