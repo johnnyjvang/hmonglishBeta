@@ -197,7 +197,9 @@
       color: white;
     }
 
-    .hmong-text {}
+    .hmong-text {
+
+    }
 
     :root {
       --swiper-theme-color: white;
@@ -284,7 +286,7 @@
           </div>
           <ul class="nav-list2">
             <li class="nav-item2 colors">
-              <h1 class="categories nav-link2">Colors</h1>
+              <h1 class="categories nav-link2 active">Colors</h1>
             </li>
             <li class="nav-item2 animals">
               <h1 class="categories nav-link2">Animals</h1>
@@ -333,26 +335,14 @@
       <div class="swiper-container mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="category-container">
-              <div class="image-container">
-                <img src="elephant.png" alt="color">
-              </div>
-              <div class="text-container">
-                <h1 class="hmong-text">HMONG TRANSLATON</h1>
-                <h1 class="english-text">ENGLISH TRANSLATON</h1>
-              </div>
+            <div class="text-container">
+              <h1 class="hmong-text">Hmonglish</h1>
+              <h1 class="english-text">Building Confidence</h1>
             </div>
           </div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
-          <div class="swiper-slide">Slide 8</div>
-          <div class="swiper-slide">Slide 9</div>
+
         </div>
-        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-pagination"></div> -->
       </div>
     </div>
 
@@ -373,15 +363,6 @@
         clickable: true,
       },
     });
-    $(".side2 h1").on("click", function() {
-      $(".side2 h1").removeClass("active");
-      $(this).addClass("active");
-    })
-
-    $(".nav-item a").on("click", function() {
-      $(".nav-item a").removeClass("active");
-      $(this).addClass("active");
-    })
   </script>
 
   <script src="script.js"></script>
