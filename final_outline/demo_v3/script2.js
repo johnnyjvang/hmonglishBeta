@@ -34,7 +34,7 @@ let colors = [
 // colors2[0] = 1st array =   ["black", "blue", "green", "purple", "red", "yellow", "colors"],
 // colors2[1] = 2nd array =   ["blacks", "blues", "greens", "purples", "reds", "yellows", "colors"],
 
-let counter = 2;
+let counter = 1;
 let view_number = document.querySelector('.nav-link.active').innerText;
 let active_category = document.querySelector('.categories.active').innerText;
 let toggle_language = document.querySelector('.df-switch .btn').getAttribute('aria-pressed');
@@ -64,29 +64,10 @@ $('.df-switch').on("click", function(){
   let active_category = document.querySelector('.categories.active').innerText;
   console.log(toggle_language, view_number, active_category);
   if (toggle_language == 'true'){
-    // console.log('true, should be green');
+    console.log('true, should be green');
   } else{
-    // console.log('false, should be white');
+    console.log('false, should be white');
   }
-  // ADD a class that says green/white?
-  // $(".side2 h1").removeClass("active");
-  // $(this).addClass("active");
-  // we add a class and check which class is aviable?
-  // if green exist do this, if white exist, do this?
-  if (counter%2 == 0){
-    let active_class = "white";
-    // console.log(active_class, counter);
-    counter = counter + 1;
-  } else{
-    let active_class = "green";
-    // console.log(active_class, counter);
-    counter = counter + 1;
-  }
-
-
-
-
-
   // console.log(view_number, active_category);
   if (view_number == 1){
     if (active_category.toLowerCase() == "colors"){
@@ -371,7 +352,7 @@ function create_sound(category_list) {
       const first_half = swiper_slide + category_container + image_container  + image_html;
       const text_contaer = '<div class="text-container">';
       const english_text = category_list[0][i];
-      if (counter%2 == 0){
+      if (toggle_language == 'false'){
         // let hmong_text = "";
         hmong_text = category_list[1][i];
         // console.log(typeof(hmong_text));
@@ -432,7 +413,7 @@ function create_sound(category_list) {
         const first_half = swiper_slide + category_container + image_container  + image_html;
         const text_contaer = '<div class="text-container">';
         const english_text = category_list[0][i];
-        if (counter%2 == 0){
+        if (toggle_language == 'false'){
           // let hmong_text = "";
           hmong_text = category_list[1][i];
           // console.log(typeof(hmong_text));
@@ -494,7 +475,7 @@ function create_sound(category_list) {
           const first_half = swiper_slide + category_container + image_container  + image_html;
           const text_contaer = '<div class="text-container">';
           const english_text = category_list[0][i];
-          if (counter%2 == 0){
+          if (toggle_language == 'false'){
             // let hmong_text = "";
             hmong_text = category_list[1][i];
             // console.log(typeof(hmong_text));
