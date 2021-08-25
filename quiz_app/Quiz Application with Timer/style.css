@@ -3,6 +3,10 @@
 *{
     margin: 0;
     padding: 0;
+    /* border-box tells the browser to account for any border and padding in the values
+    you specify for an element's width and height. If you set an element's width to
+    100 pixels, that 100 pixels will include any border or padding you added, and
+    the content box will shrink to absorb that extra width. */
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
@@ -11,6 +15,8 @@ body{
     background: #007bff;
 }
 
+/* The ::selection CSS pseudo-element applies styles to the part of a document that
+has been highlighted by the user (such as clicking and dragging the mouse across text). */
 ::selection{
     color: #fff;
     background: #007bff;
@@ -24,6 +30,8 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* box-shadow: bottom+right, top+left */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -33,6 +41,8 @@ body{
 .result_box.activeResult{
     opacity: 1;
     z-index: 5;
+    /* The pointer-events CSS property sets under what circumstances (if any) a
+    particular graphic element can become the target of pointer events. */
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
 }
@@ -46,6 +56,8 @@ body{
     border: none;
     border-radius: 5px;
     background: #fff;
+    /* The cursor CSS property sets the type of mouse cursor, if any, to show when 
+    the mouse pointer is over an element. */
     cursor: pointer;
 }
 

@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: lightblue;
+}
+
+.start_btn,
+.quiz_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.0);
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.start_btn{
+  background: white;
+  width: 50vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.pick_category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  flex-wrap: wrap;
+  /* margin: auto; */
+}
+
+.start_btn button {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem;
+  outline: none;
+  /* setting border to none disables the button click effect */
+  border: none;
+  border-radius: 5px;
+  border: 2px solid black;
+  /* background: orange; */
+  opacity: 0.5;
+  cursor: pointer;
+  /* text-align: center; */
+}
+
+.center {
+  text-align: center;
+}
+
+.pick_category h1 {
+  margin: 1rem;
+  /* background: purple; */
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  flex-basis: calc(25vw - 2rem);
+}
+
+.pick_category h1:hover {
+  opacity: 0.8;
+}
+
+.pick_category h2 {
+  margin: 1rem;
+  text-align: center;
+  flex-basis: 50vw;
+  border-radius: 10px;
+  border: 2px solid black;
+  /* border-width: thick black; */
+  /* background: chocolate; */
+}
+
+.pick_category h2:hover{
+  opacity: 0.8;
+}
+
+.active{
+  background: gray;
+  background-color: gray;
+}
+
+.quiz_box{
+  width: 71vw;
+  height: 81vh;
+  background: #fff;
+  border-radius: 5px;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* must be below all boxes, not sure why it won't work otherwise */
+.active_screen{
+  /* background: blue; */
+  opacity: 1;
+  z-index: 5;
+  /* The pointer-events CSS property sets under what circumstances (if any) a
+  particular graphic element can become the target of pointer events. */
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.quiz_box header{
+  height: 10%;
+  width: 100%;
+}
+
+.quiz_box section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 70%;
+  width: auto;
+}
+
+.quiz_box img{
+  height: 30vh;
+  width: 30vw;
+  /* flex-basis: 25vw; */
+}
+
+.quiz_box footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70%;
+  /* margin: 1rem 6rem; */
+}
+
+.row_2{
+  margin: 1rem;
+  /* background: purple; */
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  width: 50vw;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  /* .quiz_box section{
+    flex-direction: row;
+    background: purple;
+  } */
+}
+
+.non-active{
+  opacity: 0;
+}
+
+.correct{
+  background: green;
+}
+
+.incorrect{
+  background: red;
+}

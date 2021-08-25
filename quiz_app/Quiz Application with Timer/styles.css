@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background: #007bff;
+    /* height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+
+.middle{
+  /* absolute positions upper left side (point) to the center of screen */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: white;
+  width: 200px;
+  height: 200px;
+  /* to position center of box/point to center, use transform */
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+              0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+/* .middle{
+  background: white;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+              0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+} */
