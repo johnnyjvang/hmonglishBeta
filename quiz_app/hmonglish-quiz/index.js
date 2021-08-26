@@ -6,14 +6,17 @@ const first_box = document.querySelector('.start_btn');
 const category_buttons = document.querySelectorAll('.pick_category h1');
 const test_button = document.querySelector('.pick_category h3');
 const all_button = document.querySelector('.pick_category h2');
+let category_buttons_active = document.querySelectorAll('.start_btn .pick_category h1.active');
 let counter = 0;
 const quiz_box = document.querySelector('.quiz_box');
 const quiz_header = document.querySelector('.quiz_box header')
 const quiz_image = document.querySelector('.quiz_box section img');
 const quiz_buttons = document.querySelectorAll('.quiz_box h1');
 const quiz_next_button = document.querySelector('.quiz_box .next_btn');
-
 const start_button = document.querySelector('.start_button');
+
+let list_of_categories = [];
+let number_of_active = 0;
 // works for 1 button
 // category_buttons.onclick = () => {
 //   category_buttons.classList.add("active");
@@ -35,7 +38,20 @@ category_buttons.forEach((button) => {
         all_button.classList.remove('active')
       }
     }
-    is_start_active(counter);
+
+    category_buttons_active = document.querySelectorAll('.start_btn .pick_category h1.active');
+    number_of_active = category_buttons_active.length;
+    if (number_of_active >=1){
+      list_of_categories = [];
+      for (x=0; x<number_of_active; x++){
+        list_of_categories.push(category_buttons_active[x].innerText);
+        // console.log('list of category: ', x, list_of_categories);
+      }
+      // console.log('fuck you');
+      console.log('full list of categories: ', list_of_categories);
+      // alert(number_of_active);
+    }
+      is_start_active(number_of_active);
   }
   // if (button.classList.contains('active')){
   //   counter = counter + 1;
@@ -47,6 +63,7 @@ function is_start_active(counter) {
   if (counter >= 1) {
     start_button.classList.add('active');
     console.log('i am active');
+    // console.log('full list of categories: ');
   } else {
     start_button.classList.remove('active');
     console.log('i am not active');
@@ -94,11 +111,19 @@ function check_for_active(elements) {
 start_button.onclick = () => {
   if (start_button.classList.contains('active')) {
     console.log('start game');
-    quiz_box.classList.add('active_screen')
-    first_box.classList.add('non-active')
+    quiz_box.classList.add('active_screen');
+    first_box.classList.add('non-active');
+    console.log('categories: ', list_of_categories);
+    alert('categories pressed: ', list_of_categories);
+    let example_list = ["one", "two", "three", "four"];
+    let x = 0;
+    quiz_buttons.forEach( (button)=>{
+        button.innerText = example_list[x];
+        x = x + 1;
+    });
   } else {
     console.log('try again');
-    alert('Please pick a category')
+    alert('Please pick a category');
   }
 }
 

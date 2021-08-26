@@ -100,6 +100,9 @@ let working_list = [...colors[0]];
 working_list.splice(working_list.length-1,1)
 let new_category = shuffle(working_list);
 // console.log("preshuffled:", categories_list);
+
+
+
 let shuffled_categories = shuffle(categories_list)
 // how to splice last element:
 // colors[0].splice(colors[0].length-1, 1)
