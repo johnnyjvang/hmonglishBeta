@@ -63,6 +63,7 @@ body {
   /* background: purple; */
   border: 2px solid black;
   border-radius: 10px;
+  cursor: pointer;
   text-align: center;
   flex-basis: calc(25vw - 2rem);
 }
@@ -77,6 +78,7 @@ body {
   flex-basis: 50vw;
   border-radius: 10px;
   border: 2px solid black;
+  cursor: pointer;
   /* border-width: thick black; */
   /* background: chocolate; */
 }
@@ -134,7 +136,12 @@ body {
 .quiz_box img{
   height: 30vh;
   width: 30vw;
+  cursor: pointer;
   /* flex-basis: 25vw; */
+}
+
+.quiz_box img:hover{
+  opacity: 0.8;
 }
 
 .quiz_box footer{
@@ -153,14 +160,7 @@ body {
   border-radius: 10px;
   text-align: center;
   width: 50vw;
-}
-
-/* On screens that are 992px or less, set the background color to blue */
-@media screen and (max-width: 992px) {
-  /* .quiz_box section{
-    flex-direction: row;
-    background: purple;
-  } */
+  cursor: pointer;
 }
 
 .non-active{
@@ -173,4 +173,31 @@ body {
 
 .incorrect{
   background: red;
+}
+
+.next_btn{
+  background: gray;
+  opacity: 0.6;
+}
+
+.dim{
+  opacity: 0.6;
+}
+
+.dark{
+  font-size: 2rem;
+  background: yellow;
+  opacity: 1;
+}
+
+.no_click{
+    pointer-events: none;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  /* .quiz_box section{
+    flex-direction: row;
+    background: purple;
+  } */
 }

@@ -76,6 +76,27 @@ let all_categories = [...question1, ...question2, ...question3];
 console.log('non-shuffled: ', all_categories);
 console.log('shuffled: ', shuffleArray(all_categories));
 
+let image = "image";
+let button1 = "one";
+let button2 = "two";
+let button3 = "thre";
+let button4 = "four";
+
+for (let y = 0; y < all_categories.length-1; y++){
+  image = all_categories[y][0]
+  button1 = all_categories[y][1]
+  button2 = all_categories[y][2]
+  button3 = all_categories[y][3]
+  button4 = all_categories[y][4]
+  console.log('Questions list #: ', y)
+  console.log('image: ', image);
+  console.log('button1: ', button1);
+  console.log('button2: ', button2);
+  console.log('button3: ', button3);
+  console.log('button4: ', button4);
+}
+
+
 // let questions = [];
 // for (let i =0; i< colors[0].length; i++){
 //   let working_set = [];
